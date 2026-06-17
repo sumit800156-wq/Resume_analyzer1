@@ -2,6 +2,9 @@ import streamlit as st
 import PyPDF2
 import re
 import nltk
+nltk.download("punkt")
+nltk.download("punkt_tab"
+nltk.download("stopwords"
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt

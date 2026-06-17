@@ -171,7 +171,7 @@ def calculate_ats_score(similarity, matched, missing):
     return round(ats,2), round(skill_score,2)
 
 def extract_keywords(text):
-    words = word_tokenize(clean_text(text).split()
+    words = clean_text(text).split()
     return Counter(words).most_common(10)
 
 # ---------------- HOME ---------------- #

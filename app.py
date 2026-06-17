@@ -10,7 +10,6 @@ from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
 import base64
 # ---------------- NLTK ---------------- #
 nltk.download("punkt")
@@ -144,7 +143,7 @@ def extract_text_from_pdf(file):
 def clean_text(text):
     text = text.lower()
     text = re.sub(r"[^a-zA-Z0-9\s]", " ", text)
-    words = word_tokenize(text)
+    words = text.split()
     stop_words = set(stopwords.words("english"))
     words = [w for w in words if w not in stop_words]
     return " ".join(words)
